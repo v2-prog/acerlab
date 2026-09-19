@@ -1,0 +1,5 @@
+https://www.acerlab.link/*  https://acerlab.link/:splat  301
+/lab                        /labs/02-structure           301
+/lab/                       /labs/02-structure           301
+/lab/*                      /labs/02-structure           301
+/*                          /index.html                  200

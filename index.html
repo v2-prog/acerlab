@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      (function () {
+        var base = "/";
+        var host = location.hostname;
+        var projects = { "structure-lab": 1, acerlab: 1 };
+        if (/\.github\.io$/i.test(host)) {
+          var seg = location.pathname.split("/").filter(Boolean)[0];
+          if (seg && projects[seg]) base = "/" + seg + "/";
+        }
+        document.write('<base href="' + base + '">');
+        document.write('<link rel="stylesheet" crossorigin href="' + base + 'assets/styles-D4Jhii1k.css">');
+        document.write('<script type="module" crossorigin src="' + base + 'assets/index-B8P7je1N.js"><\/script>');
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AcerLab</title>
+    <meta
+      name="description"
+      content="Australian family, land and purpose instruments — trusts, CLTs, charities, co-ops, CGT and duty flags. General information, not advice."
+    />
+    <meta name="theme-color" content="#2F5D4F" />
+    <meta name="apple-mobile-web-app-title" content="AcerLab" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="canonical" href="https://acerlab.link/" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AcerLab" />
+    <meta property="og:title" content="AcerLab" />
+    <meta
+      property="og:description"
+      content="Family, land & purpose instruments — Australia."
+    />
+    <meta property="og:url" content="https://acerlab.link/" />
+    <meta property="og:image" content="https://acerlab.link/og.jpg" />
+    <meta property="og:locale" content="en_AU" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AcerLab" />
+    <meta
+      name="twitter:description"
+      content="Family, land & purpose instruments — Australia."
+    />
+    <meta name="twitter:image" content="https://acerlab.link/og.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap"
+    />
+  </head>
+  <body class="bg-paper text-ink">
+    <div id="acerlab-root"></div>
+  </body>
+</html>

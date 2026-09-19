@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="AcerLab">
+  <rect width="32" height="32" fill="#F4EFE6"/>
+  <rect x="3" y="3" width="26" height="26" fill="#2F5D4F"/>
+  <polygon fill="#F4EFE6" points="14.4,8.2 16.3,8.2 11.6,25 8.6,25"/>
+  <polygon fill="#F4EFE6" points="15.7,8.2 17.6,8.2 23.4,25 20.4,25"/>
+  <rect fill="#F4EFE6" x="12.4" y="16.6" width="7.2" height="2.15"/>
+</svg>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Treasurer desk — AcerLab Navigator</title>
+  <meta name="theme-color" content="#2F5D4F">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./app.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+</head>
+<body data-page="admin">
+  <div class="shell">
+    <aside class="sidebar"><a class="brand" href="index.html"><strong>Navigator</strong><span>AcerLab · AU only</span></a><nav class="nav" data-nav></nav></aside>
+    <div class="main">
+      <header class="top"><button class="menu-btn" type="button" id="open-nav" aria-label="Open menu">☰</button><div class="crumb"><span data-crumb-n></span><b data-crumb-label></b></div><label class="juri-wrap" for="jurisdiction"><span>Place</span><select id="jurisdiction"></select></label></header>
+      <div class="banner" role="note">Device-local treasurer desk. Not a multi-user backend.</div>
+      <main class="content">
+        <h1>Treasurer desk</h1>
+        <p class="lede">A pass-phrase stored in this browser unlocks local extras and open-counts from this device.</p>
+        <div id="admin-gate">
+          <label class="field"><span>Pass-phrase for this device</span><input type="password" id="admin-pass" autocomplete="current-password"></label>
+          <div class="actions"><button class="btn" type="button" id="admin-unlock">Unlock</button></div>
+          <p class="muted">Fresh device default is <span class="code">acerlab</span>. Change it after first unlock.</p>
+        </div>
+        <div id="admin-desk" hidden>
+          <h2>Engagement on this browser</h2>
+          <div id="admin-stats"></div>
+          <h2>Add a local resource</h2>
+          <label class="field"><span>Name</span><input type="text" id="r-name"></label>
+          <label class="field"><span>URL</span><input type="text" id="r-url" placeholder="https://"></label>
+          <label class="field"><span>Note</span><input type="text" id="r-note"></label>
+          <label class="field"><span>Region code (AU, NSW, ACT…)</span><input type="text" id="r-region" value="AU"></label>
+          <div class="actions"><button class="btn" type="button" id="r-add">Add to this device</button></div>
+          <div id="admin-resources"></div>
+          <h2>Pass-phrase</h2>
+          <label class="field"><span>New pass-phrase (6+ characters)</span><input type="password" id="new-pass" autocomplete="new-password"></label>
+          <div class="actions">
+            <button class="btn" type="button" id="set-pass">Save pass-phrase</button>
+            <button class="btn btn-ghost" type="button" id="admin-lock">Lock desk</button>
+          </div>
+        </div>
+      </main>
+      <footer class="footer"><a href="https://github.com/v2-prog/acerlab">v2-prog/acerlab</a></footer>
+    </div>
+  </div>
+  <div id="drawer" class="drawer"><div class="scrim" id="close-nav"></div><div class="panel"><a class="brand" href="index.html"><strong>Navigator</strong></a><nav class="nav" data-nav></nav></div></div>
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

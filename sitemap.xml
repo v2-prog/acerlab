@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://acerlab.link/</loc></url>
-  <url><loc>https://acerlab.link/labs/01-civic</loc></url>
-  <url><loc>https://acerlab.link/labs/02-structure</loc></url>
-  <url><loc>https://acerlab.link/labs/03-earth-acre</loc></url>
-  <url><loc>https://acerlab.link/review</loc></url>
-  <url><loc>https://acerlab.link/method</loc></url>
-  <url><loc>https://acerlab.link/disclaimer</loc></url>
+  <url><loc>https://acerlab.link/finance.html</loc></url>
+  <url><loc>https://acerlab.link/budget.html</loc></url>
+  <url><loc>https://acerlab.link/wages.html</loc></url>
+  <url><loc>https://acerlab.link/savings.html</loc></url>
+  <url><loc>https://acerlab.link/debt.html</loc></url>
+  <url><loc>https://acerlab.link/glossary.html</loc></url>
+  <url><loc>https://acerlab.link/progress.html</loc></url>
+  <url><loc>https://acerlab.link/village.html</loc></url>
+  <url><loc>https://acerlab.link/structures.html</loc></url>
+  <url><loc>https://acerlab.link/zoning.html</loc></url>
+  <url><loc>https://acerlab.link/building.html</loc></url>
+  <url><loc>https://acerlab.link/shared.html</loc></url>
+  <url><loc>https://acerlab.link/resources.html</loc></url>
+  <url><loc>https://acerlab.link/templates.html</loc></url>
+  <url><loc>https://acerlab.link/admin.html</loc></url>
 </urlset>

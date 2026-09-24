@@ -1,7 +1,7 @@
 {
-  "name": "AcerLab",
-  "short_name": "AcerLab",
-  "description": "Family, land & purpose instruments — Australia",
+  "name": "AcerLab Navigator",
+  "short_name": "Navigator",
+  "description": "Money literacy and shared-living pathways — Australia only",
   "id": "./",
   "start_url": "./",
   "scope": "./",

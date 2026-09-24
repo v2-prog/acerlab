@@ -1,9 +1,12 @@
-# AcerLab — Cloudflare Pages
-# Dashboard account: Amarwakara@gmail.com (zone acerlab.link)
-# Git source: v2-prog/structure-lab, branch main
+# AcerLab Navigator — Cloudflare Pages
+# Dashboard account: Amarwakara@gmail.com
+# Git source: v2-prog/acerlab, branch main
 # Framework preset: None · Build command: (empty) · Output directory: /
 #
+# Attach coeconomics.com once that zone is on this Cloudflare account.
 # Do not attach earthacer.in. That zone stays parked at Hostinger.
+# If acerlab.link should keep serving Structure Lab AU, leave that
+# Pages project on v2-prog/structure-lab and give this project its own hostname.
 
 name = "acerlab"
 compatibility_date = "2026-09-20"

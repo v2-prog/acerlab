@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shared living — AcerLab Navigator</title>
+  <meta name="description" content="Cohabitation and eco-village navigator for Australian title, zoning and shared money.">
+  <meta name="theme-color" content="#2F5D4F">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./app.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+</head>
+<body data-page="village">
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><strong>Navigator</strong><span>AcerLab · money &amp; shared living · AU only</span></a>
+      <nav class="nav" data-nav aria-label="Primary"></nav>
+    </aside>
+    <div class="main">
+      <header class="top">
+        <button class="menu-btn" type="button" id="open-nav" aria-label="Open menu">☰</button>
+        <div class="crumb"><span data-crumb-n></span><b data-crumb-label></b></div>
+        <label class="juri-wrap" for="jurisdiction"><span>Place</span><select id="jurisdiction" aria-label="Australian jurisdiction"></select></label>
+      </header>
+      <div class="banner" role="note">General education only. Not licensed financial, legal, tax or planning advice. Confirm with a registered tax agent, solicitor and your local council / certifier.</div>
+      <main class="content">
+<h1>Cohabitation / eco-village navigator</h1>
+<p class="lede">How people hold land together in Australia without mixing a family investment story with a locked purpose story.</p>
+<p class="note"><span class="mark">▣</span><span>A charity or community land trust with an asset lock cannot be a substitute for a family discretionary trust.</span></p>
+<div class="grid two">
+  <a class="card" href="structures.html"><span class="num">09</span><h2>Legal structures</h2><p>Tenants in common + deed, strata, company title, co-op, CLT, association.</p></a>
+  <a class="card" href="zoning.html"><span class="num">10</span><h2>Zoning pathway</h2><p>Drafts the email you send to planning — not a determination.</p></a>
+  <a class="card" href="building.html"><span class="num">11</span><h2>Building codes</h2><p>Class 1 vs Class 2 language — what to ask the certifier.</p></a>
+  <a class="card" href="shared.html"><span class="num">12</span><h2>Shared money</h2><p>Levies, sinking funds, joint vs individual finance.</p></a>
+  <a class="card" href="resources.html"><span class="num">13</span><h2>Directory</h2><p>ATO, planning portals, ACNC, NCC — filtered by place.</p></a>
+  <a class="card" href="templates.html"><span class="num">14</span><h2>Checklists</h2><p>Co-ownership conversation list and sketch cases.</p></a>
+</div>
+      </main>
+      <footer class="footer">Companion to Structure Lab AU · <a href="https://github.com/v2-prog/acerlab">v2-prog/acerlab</a> · Device-local data only</footer>
+    </div>
+  </div>
+  <div id="drawer" class="drawer">
+    <div class="scrim" id="close-nav"></div>
+    <div class="panel">
+      <a class="brand" href="index.html"><strong>Navigator</strong><span>Earth Acer · Australia only</span></a>
+      <nav class="nav" data-nav aria-label="Mobile"></nav>
+    </div>
+  </div>
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

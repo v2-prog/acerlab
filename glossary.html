@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glossary — AcerLab Navigator</title>
+  <meta name="description" content="Searchable glossary of financial and shared-living terms.">
+  <meta name="theme-color" content="#2F5D4F">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./app.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+</head>
+<body data-page="glossary">
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><strong>Navigator</strong><span>AcerLab · money &amp; shared living · AU only</span></a>
+      <nav class="nav" data-nav aria-label="Primary"></nav>
+    </aside>
+    <div class="main">
+      <header class="top">
+        <button class="menu-btn" type="button" id="open-nav" aria-label="Open menu">☰</button>
+        <div class="crumb"><span data-crumb-n></span><b data-crumb-label></b></div>
+        <label class="juri-wrap" for="jurisdiction"><span>Place</span><select id="jurisdiction" aria-label="Australian jurisdiction"></select></label>
+      </header>
+      <div class="banner" role="note">General education only. Not licensed financial, legal, tax or planning advice. Confirm with a registered tax agent, solicitor and your local council / certifier.</div>
+      <main class="content">
+<h1>Glossary</h1>
+<p class="lede">Short definitions used in both rooms. Confirm current law.</p>
+<label class="field search"><span>Search terms</span><input type="search" id="gloss-q" placeholder="offset, levy, CLT, concessional…"></label>
+<div id="glossary-list"></div>
+<div class="actions"><button class="btn" type="button" data-done="glossary">Mark this module reviewed</button></div>
+      </main>
+      <footer class="footer">Companion to Structure Lab AU · <a href="https://github.com/v2-prog/acerlab">v2-prog/acerlab</a> · Device-local data only</footer>
+    </div>
+  </div>
+  <div id="drawer" class="drawer">
+    <div class="scrim" id="close-nav"></div>
+    <div class="panel">
+      <a class="brand" href="index.html"><strong>Navigator</strong><span>Earth Acer · Australia only</span></a>
+      <nav class="nav" data-nav aria-label="Mobile"></nav>
+    </div>
+  </div>
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

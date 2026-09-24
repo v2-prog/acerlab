@@ -1,60 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-AU">
-  <head>
-    <meta charset="utf-8" />
-    <script>
-      (function () {
-        var base = "/";
-        var host = location.hostname;
-        var projects = { "structure-lab": 1, acerlab: 1 };
-        if (/\.github\.io$/i.test(host)) {
-          var seg = location.pathname.split("/").filter(Boolean)[0];
-          if (seg && projects[seg]) base = "/" + seg + "/";
-        }
-        document.write('<base href="' + base + '">');
-        document.write('<link rel="stylesheet" crossorigin href="' + base + 'assets/styles-D4Jhii1k.css">');
-        document.write('<script type="module" crossorigin src="' + base + 'assets/index-B8P7je1N.js"><\/script>');
-      })();
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AcerLab</title>
-    <meta
-      name="description"
-      content="Australian family, land and purpose instruments — trusts, CLTs, charities, co-ops, CGT and duty flags. General information, not advice."
-    />
-    <meta name="theme-color" content="#2F5D4F" />
-    <meta name="apple-mobile-web-app-title" content="AcerLab" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <link rel="canonical" href="https://acerlab.link/" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
-    <link rel="manifest" href="./site.webmanifest" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="AcerLab" />
-    <meta property="og:title" content="AcerLab" />
-    <meta
-      property="og:description"
-      content="Family, land & purpose instruments — Australia."
-    />
-    <meta property="og:url" content="https://acerlab.link/" />
-    <meta property="og:image" content="https://acerlab.link/og.jpg" />
-    <meta property="og:locale" content="en_AU" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="AcerLab" />
-    <meta
-      name="twitter:description"
-      content="Family, land & purpose instruments — Australia."
-    />
-    <meta name="twitter:image" content="https://acerlab.link/og.jpg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap"
-    />
-  </head>
-  <body class="bg-paper text-ink">
-    <div id="acerlab-root"></div>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home — AcerLab Navigator</title>
+  <meta name="description" content="Financial literacy and cohabitation / eco-village navigator for Australian community groups. General education only.">
+  <meta name="theme-color" content="#2F5D4F">
+  <link rel="canonical" href="https://acerlab.link/">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <meta property="og:title" content="Home — AcerLab Navigator">
+  <meta property="og:description" content="Financial literacy and cohabitation / eco-village navigator for Australian community groups. General education only.">
+  <meta property="og:url" content="https://acerlab.link/">
+  <meta property="og:image" content="https://acerlab.link/og.jpg">
+  <meta property="og:locale" content="en_AU">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./app.css">
+</head>
+<body data-page="home">
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <strong>Navigator</strong>
+        <span>AcerLab · money &amp; shared living · AU only</span>
+      </a>
+      <nav class="nav" data-nav aria-label="Primary"></nav>
+    </aside>
+    <div class="main">
+      <header class="top">
+        <button class="menu-btn" type="button" id="open-nav" aria-label="Open menu">☰</button>
+        <div class="crumb"><span class="code" data-crumb-n></span><b data-crumb-label></b></div>
+        <label class="juri-wrap" for="jurisdiction"><span>Place</span>
+          <select id="jurisdiction" aria-label="Australian jurisdiction"></select>
+        </label>
+      </header>
+      <div class="banner" role="note">General education only. Not licensed financial, legal, tax or planning advice. Confirm every decision with a registered tax agent, solicitor and your local council / building certifier.</div>
+      <main class="content">
+<h1>Money literacy, then shared land — without mixing the two.</h1>
+<p class="lede">Two rooms in one notebook. First, how a household’s cash actually behaves. Second, how Australians hold land together without accidentally signing away their independence. Nothing here is a product, a quote, or a booking.</p>
+<div class="kpi">
+  <div class="card"><span class="muted">Place set</span><strong id="kpi-juri">ACT</strong></div>
+  <div class="card"><span class="muted">Modules reviewed</span><strong id="kpi-reviewed">0 / 11</strong></div>
+  <div class="card"><span class="muted">Data stored</span><strong>This device only</strong></div>
+</div>
+<div class="grid two">
+  <a class="card" href="finance.html"><span class="num">01</span><h2>Financial literacy</h2><p>Budget picture, wage packaging language, compounding, debt mechanics, searchable glossary.</p></a>
+  <a class="card" href="village.html"><span class="num">08</span><h2>Cohabitation / eco-village</h2><p>Title models, council questions, building-class flags, shared levies, checklists.</p></a>
+</div>
+<p class="note"><span class="mark">▣</span><span>A charity or community land trust with an asset lock cannot be a substitute for a family discretionary trust. If you need the family-investment fork, use <a href="https://github.com/v2-prog/structure-lab">Structure Lab AU</a>.</span></p>
+<p class="muted">Workshop voice of Earth Acer / Ever Earth Acre / Doug’s Lab AU. Australia only. No LLCs, no 1031, no Augusta rule.</p>
+      </main>
+      <footer class="footer">Companion to <a href="https://acerlab.link/">Structure Lab AU</a> · Source <a href="https://github.com/v2-prog/acerlab">v2-prog/acerlab</a> · No sensitive money data leaves this device</footer>
+    </div>
+  </div>
+  <div id="drawer" class="drawer">
+    <div class="scrim" id="close-nav"></div>
+    <div class="panel">
+      <a class="brand" href="index.html"><strong>Navigator</strong><span>Earth Acer · Australia only</span></a>
+      <nav class="nav" data-nav aria-label="Mobile"></nav>
+    </div>
+  </div>
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
 </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Budget studio — AcerLab Navigator</title>
+  <meta name="theme-color" content="#2F5D4F">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./app.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+</head>
+<body data-page="budget">
+  <div class="shell">
+    <aside class="sidebar"><a class="brand" href="index.html"><strong>Navigator</strong><span>AcerLab · AU only</span></a><nav class="nav" data-nav></nav></aside>
+    <div class="main">
+      <header class="top"><button class="menu-btn" type="button" id="open-nav">☰</button><div class="crumb"><span data-crumb-n></span><b data-crumb-label></b></div><label class="juri-wrap" for="jurisdiction"><span>Place</span><select id="jurisdiction"></select></label></header>
+      <div class="banner" role="note">Education only. Figures stay in this browser.</div>
+      <main class="content">
+        <h1>Budget studio</h1>
+        <p class="lede">A monthly picture, not a bank feed.</p>
+        <div class="grid two">
+          <div>
+            <label class="field"><span>Net income each month</span><input type="number" min="0" step="10" data-budget="income" value="6500"></label>
+            <label class="field"><span>Housing</span><input type="number" min="0" step="10" data-budget="housing" value="1800"></label>
+            <label class="field"><span>Food</span><input type="number" min="0" step="10" data-budget="food" value="900"></label>
+            <label class="field"><span>Transport</span><input type="number" min="0" step="10" data-budget="transport" value="350"></label>
+            <label class="field"><span>Utilities &amp; communications</span><input type="number" min="0" step="10" data-budget="utilities" value="280"></label>
+            <label class="field"><span>Other living costs</span><input type="number" min="0" step="10" data-budget="other" value="400"></label>
+          </div>
+          <div>
+            <div class="kpi">
+              <div class="card"><span class="muted">Income</span><strong id="kpi-inc">—</strong></div>
+              <div class="card"><span class="muted">Outgoings</span><strong id="kpi-exp">—</strong></div>
+              <div class="card"><span class="muted" id="kpi-rest-label">Unallocated</span><strong id="kpi-rest">—</strong></div>
+            </div>
+            <div class="bars">
+              <div class="bar-row"><span>Income</span><div class="bar-track"><div class="bar-fill" data-bar="income"></div></div><span data-bar-val="income"></span></div>
+              <div class="bar-row"><span>Housing</span><div class="bar-track"><div class="bar-fill clay" data-bar="housing"></div></div><span data-bar-val="housing"></span></div>
+              <div class="bar-row"><span>Food</span><div class="bar-track"><div class="bar-fill clay" data-bar="food"></div></div><span data-bar-val="food"></span></div>
+              <div class="bar-row"><span>Transport</span><div class="bar-track"><div class="bar-fill clay" data-bar="transport"></div></div><span data-bar-val="transport"></span></div>
+              <div class="bar-row"><span>Utilities</span><div class="bar-track"><div class="bar-fill clay" data-bar="utilities"></div></div><span data-bar-val="utilities"></span></div>
+              <div class="bar-row"><span>Other</span><div class="bar-track"><div class="bar-fill clay" data-bar="other"></div></div><span data-bar-val="other"></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="actions"><button class="btn" type="button" data-done="budget">Mark this module reviewed</button></div>
+      </main>
+      <footer class="footer"><a href="https://github.com/v2-prog/acerlab">v2-prog/acerlab</a></footer>
+    </div>
+  </div>
+  <div id="drawer" class="drawer"><div class="scrim" id="close-nav"></div><div class="panel"><a class="brand" href="index.html"><strong>Navigator</strong></a><nav class="nav" data-nav></nav></div></div>
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

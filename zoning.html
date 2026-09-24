@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zoning pathway — AcerLab Navigator</title>
+  <meta name="theme-color" content="#2F5D4F">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./app.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+</head>
+<body data-page="zoning">
+  <div class="shell">
+    <aside class="sidebar"><a class="brand" href="index.html"><strong>Navigator</strong><span>AcerLab · AU only</span></a><nav class="nav" data-nav></nav></aside>
+    <div class="main">
+      <header class="top"><button class="menu-btn" type="button" id="open-nav">☰</button><div class="crumb"><span data-crumb-n></span><b data-crumb-label></b></div><label class="juri-wrap" for="jurisdiction"><span>Place</span><select id="jurisdiction"></select></label></header>
+      <div class="banner" role="note">This room drafts an email. Council writes the answer.</div>
+      <main class="content">
+        <h1>Zoning pathway — questions, not a permit</h1>
+        <form id="zoning-form">
+          <div class="q"><p><b>What kind of lot?</b></p><div class="choices">
+            <label><input type="radio" name="setting" value="urban"> Suburban / urban</label>
+            <label><input type="radio" name="setting" value="rural" checked> Rural / peri-urban</label>
+            <label><input type="radio" name="setting" value="bush"> Heavily overlaid</label>
+          </div></div>
+          <div class="q"><p><b>Extra dwellings beyond the first house?</b></p><div class="choices">
+            <label><input type="radio" name="extra" value="1"> One</label>
+            <label><input type="radio" name="extra" value="2" checked> Two or three</label>
+            <label><input type="radio" name="extra" value="many"> A cluster</label>
+          </div></div>
+          <div class="q"><p><b>Tradeable family share, or locked purpose land?</b></p><div class="choices">
+            <label><input type="radio" name="tenure" value="share" checked> Saleable share</label>
+            <label><input type="radio" name="tenure" value="lock"> Locked in a CLT / charity</label>
+          </div></div>
+        </form>
+        <div class="tree-out" id="zoning-out"></div>
+        <div class="actions"><button class="btn" type="button" data-done="zoning">Mark this module reviewed</button></div>
+      </main>
+      <footer class="footer"><a href="https://github.com/v2-prog/acerlab">v2-prog/acerlab</a></footer>
+    </div>
+  </div>
+  <div id="drawer" class="drawer"><div class="scrim" id="close-nav"></div><div class="panel"><a class="brand" href="index.html"><strong>Navigator</strong></a><nav class="nav" data-nav></nav></div></div>
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

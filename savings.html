@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Savings &amp; investing — AcerLab Navigator</title>
+  <meta name="theme-color" content="#2F5D4F">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./app.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+</head>
+<body data-page="savings">
+  <div class="shell">
+    <aside class="sidebar"><a class="brand" href="index.html"><strong>Navigator</strong><span>AcerLab · AU only</span></a><nav class="nav" data-nav></nav></aside>
+    <div class="main">
+      <header class="top"><button class="menu-btn" type="button" id="open-nav">☰</button><div class="crumb"><span data-crumb-n></span><b data-crumb-label></b></div><label class="juri-wrap" for="jurisdiction"><span>Place</span><select id="jurisdiction"></select></label></header>
+      <div class="banner" role="note">A 5% line is not an index-fund forecast.</div>
+      <main class="content">
+        <h1>Savings vehicles and compounding</h1>
+        <div class="grid two">
+          <div>
+            <label class="field"><span>Starting amount ($)</span><input type="number" id="c-start" value="10000" min="0" step="100"></label>
+            <label class="field"><span>Extra each month ($)</span><input type="number" id="c-month" value="300" min="0" step="10"></label>
+            <label class="field"><span>Illustrative annual rate (%)</span><input type="number" id="c-rate" value="5" min="0" step="0.1"></label>
+            <label class="field"><span>Years</span><input type="number" id="c-years" value="15" min="1" max="50"></label>
+          </div>
+          <div id="compound-out" class="summary"></div>
+        </div>
+        <h2>Vehicles, in plain language</h2>
+        <div class="compare cols-2" id="vehicles"></div>
+        <div class="actions"><button class="btn" type="button" data-done="savings">Mark this module reviewed</button></div>
+      </main>
+      <footer class="footer"><a href="https://github.com/v2-prog/acerlab">v2-prog/acerlab</a></footer>
+    </div>
+  </div>
+  <div id="drawer" class="drawer"><div class="scrim" id="close-nav"></div><div class="panel"><a class="brand" href="index.html"><strong>Navigator</strong></a><nav class="nav" data-nav></nav></div></div>
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

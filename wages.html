@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wage &amp; tax structure — AcerLab Navigator</title>
+  <meta name="theme-color" content="#2F5D4F">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./app.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+</head>
+<body data-page="wages">
+  <div class="shell">
+    <aside class="sidebar"><a class="brand" href="index.html"><strong>Navigator</strong><span>AcerLab · AU only</span></a><nav class="nav" data-nav></nav></aside>
+    <div class="main">
+      <header class="top"><button class="menu-btn" type="button" id="open-nav">☰</button><div class="crumb"><span data-crumb-n></span><b data-crumb-label></b></div><label class="juri-wrap" for="jurisdiction"><span>Place</span><select id="jurisdiction"></select></label></header>
+      <div class="banner" role="note">Sketch only. FY2025–26 illustrations. Not a tax return.</div>
+      <main class="content">
+        <h1>Wage optimisation — as language, not advice</h1>
+        <p class="lede">How take-home pay is commonly structured in Australia. Sit with a registered tax agent before acting.</p>
+        <div class="grid two">
+          <div>
+            <label class="field"><span>Illustrative gross annual wage</span><input type="number" min="0" step="1000" id="gross" value="90000"></label>
+            <label class="field"><span>Extra concessional / salary sacrifice ($ / year)</span><input type="number" min="0" step="500" id="sacrifice" value="5000"></label>
+            <label class="field"><span>Include 12% Super Guarantee on gross?</span>
+              <select id="sg"><option value="1" selected>Yes — typical employee</option><option value="0">No — already in the wage figure</option></select>
+            </label>
+          </div>
+          <div id="wage-out" class="summary"></div>
+        </div>
+        <h2>What the words mean</h2>
+        <div class="grid two">
+          <div class="card"><h3>Salary packaging</h3><p>A written deal with the employer to send part of gross pay to super before it is taxed at marginal rates.</p></div>
+          <div class="card"><h3>Concessional vs non-concessional</h3><p>Concessional amounts are taxed in the fund, usually 15% for most members. Non-concessional amounts are after-tax.</p></div>
+          <div class="card"><h3>Offsets</h3><p>This sketch ignores offsets so nobody treats the number as a refund estimate.</p></div>
+          <div class="card"><h3>Independence</h3><p>Each adult keeps their own super member account. A community levy is an after-tax outgoing.</p></div>
+        </div>
+        <div class="actions"><button class="btn" type="button" data-done="wages">Mark this module reviewed</button></div>
+      </main>
+      <footer class="footer"><a href="https://github.com/v2-prog/acerlab">v2-prog/acerlab</a></footer>
+    </div>
+  </div>
+  <div id="drawer" class="drawer"><div class="scrim" id="close-nav"></div><div class="panel"><a class="brand" href="index.html"><strong>Navigator</strong></a><nav class="nav" data-nav></nav></div></div>
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

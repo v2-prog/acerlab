@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Debt literacy — AcerLab Navigator</title>
+  <meta name="theme-color" content="#2F5D4F">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./app.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+</head>
+<body data-page="debt">
+  <div class="shell">
+    <aside class="sidebar"><a class="brand" href="index.html"><strong>Navigator</strong><span>AcerLab · AU only</span></a><nav class="nav" data-nav></nav></aside>
+    <div class="main">
+      <header class="top"><button class="menu-btn" type="button" id="open-nav">☰</button><div class="crumb"><span data-crumb-n></span><b data-crumb-label></b></div><label class="juri-wrap" for="jurisdiction"><span>Place</span><select id="jurisdiction"></select></label></header>
+      <div class="banner" role="note">Illustration only — no issuer fees or rate changes.</div>
+      <main class="content">
+        <h1>Debt literacy</h1>
+        <p class="lede">Minimum payments keep the account open; they are rarely the cheapest path off the balance.</p>
+        <div class="grid two">
+          <div>
+            <label class="field"><span>Balance ($)</span><input type="number" id="d-bal" value="12000" min="0"></label>
+            <label class="field"><span>Annual interest rate (%)</span><input type="number" id="d-rate" value="19.99" min="0" step="0.01"></label>
+            <label class="field"><span>Minimum payment ($ / month)</span><input type="number" id="d-min" value="300" min="0"></label>
+            <label class="field"><span>What-if extra payment ($ / month)</span><input type="number" id="d-extra" value="150" min="0"></label>
+          </div>
+          <div id="debt-out" class="summary"></div>
+        </div>
+        <h2>Good debt / bad debt — a teaching frame</h2>
+        <div class="grid two">
+          <div class="card"><h3>Working debt</h3><p>A loan attached to an asset that can be sold, on a rate you can service from ordinary income.</p></div>
+          <div class="card"><h3>Draining debt</h3><p>High-rate revolving balances funding things that fall in value.</p></div>
+          <div class="card"><h3>Shared-living trap</h3><p>A joint mortgage is simple for the bank. A co-ownership deed does not bind the lender.</p></div>
+          <div class="card"><h3>Independence</h3><p>Do not guarantee another household’s dwelling loan. Cap any guarantee in writing.</p></div>
+        </div>
+        <div class="actions"><button class="btn" type="button" data-done="debt">Mark this module reviewed</button></div>
+      </main>
+      <footer class="footer"><a href="https://github.com/v2-prog/acerlab">v2-prog/acerlab</a></footer>
+    </div>
+  </div>
+  <div id="drawer" class="drawer"><div class="scrim" id="close-nav"></div><div class="panel"><a class="brand" href="index.html"><strong>Navigator</strong></a><nav class="nav" data-nav></nav></div></div>
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

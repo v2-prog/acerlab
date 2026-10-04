@@ -34,7 +34,7 @@ window.AcerContent = {
     ["6", "Emergency savings", "plan-emergency-fund.html", "Essential costs times 1, 3, 6 or more months."],
     ["7", "Mortgage dependence", "plan-home.html", "Extra repayment maths, offset, rate stress. Fees and break costs first."],
     ["8", "Retirement range", "plan-retirement.html", "Basic, comfortable, preferred. A range, never one number."],
-    ["9", "Legacy", "plan-legacy.html", "Time, knowledge, relationships, generosity — and the documents."]
+    ["9", "Legacy", "/plan/legacy/", "Time, knowledge, relationships, generosity — and the documents."]
   ],
   glossary: [
     ["Testamentary discretionary trust", "A trust created by a will. It can hold a beneficiary's inheritance. Whether it protects against later divorce, bankruptcy or creditors depends on the deed and the facts."],

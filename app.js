@@ -4,18 +4,27 @@
     ["index.html", "Dashboard", ""],
     ["onboarding.html", "Set up", ""],
     ["plan.html", "My plan", "Plan"],
+    ["plan-foundations.html", "Foundations", "Plan"],
     ["plan-buckets.html", "Buckets", "Plan"],
     ["plan-debt.html", "Debt", "Plan"],
     ["plan-emergency-fund.html", "Emergency fund", "Plan"],
     ["plan-home.html", "Home", "Plan"],
     ["plan-super.html", "Super", "Plan"],
+    ["plan-investing.html", "Investing", "Plan"],
     ["plan-retirement.html", "Retirement", "Plan"],
     ["plan-legacy.html", "Legacy", "Plan"],
     ["family.html", "Family", "Family"],
+    ["family-lessons.html", "Lessons", "Family"],
+    ["family-chores.html", "Chores", "Family"],
+    ["family-goals.html", "Goals", "Family"],
     ["family-meetings.html", "Money meeting", "Family"],
-    ["tools-bucket.html", "Calculators", "Tools"],
+    ["tools.html", "Calculators", "Tools"],
     ["learn.html", "Learn", "Learn"],
+    ["glossary.html", "Glossary", "Learn"],
     ["support.html", "Support", "Safety"],
+    ["about.html", "About", "Safety"],
+    ["disclaimer.html", "Disclaimer", "Safety"],
+    ["privacy.html", "Privacy", "Safety"],
     ["settings.html", "Settings", ""]
   ];
 
@@ -49,8 +58,10 @@
     var essentials = Number(d.essentials) || 0;
     var income = Number(d.income) || 0;
     if (income && essentials > income) return "crisis";
+    if (!d.who && !d.income && !d.priority) return "unset";
     if (d.highInterest === "yes") return "debt_reduction";
-    var months = Number(d.bufferMonths) || 0;
+    if (d.bufferMonths === undefined || d.bufferMonths === "") return "secure";
+    var months = Number(d.bufferMonths);
     if (months < 1) return "stabilising";
     if (months < 3) return "secure";
     if (d.priority === "retire") return "transitioning_to_retirement";
@@ -60,6 +71,9 @@
   function labelState(s) { return String(s || "").replace(/_/g, " "); }
   function nextAction(d) {
     var state = d.stateOverride || classify(d);
+    if (state === "unset") {
+      return { title: "Start with three questions", steps: ["Say who this is for, and your state or territory.", "Pick a first priority. Skip the dollar fields if you want.", "Open buckets only after essentials and income are both known."], why: "An empty household is not a debt problem. The aid waits until you set something." };
+    }
     if (state === "crisis") {
       return { title: "Protect the basics", steps: ["Keep housing, food, utilities, medication and safety first.", "Leave investing screens closed.", "Open Support for free financial counselling.", "Contact a lender early if a repayment is at risk."], why: "Essentials or safety come before optimisation." };
     }
@@ -76,7 +90,7 @@
     return state === "crisis" || state === "stabilising" || (Number(d.essentials) > Number(d.income) && Number(d.income) > 0) || d.arrears === "yes";
   }
   function draftNote() {
-    return '<p class="note"><span class="tag warn">Draft</span><span>' + esc(AcerContent.disclaimer) + " Review status: " + AcerContent.reviewStatus + ". Last reviewed " + AcerContent.lastReviewed + ".</span></p>";
+    return '<p class="muted">Draft copy, last reviewed ' + AcerContent.lastReviewed + '. Confirm before you act.</p>';
   }
   function resultTable(obj) {
     if (obj == null) return "";
@@ -98,7 +112,7 @@
     return "<h1>Dashboard</h1><p class=\"lede\">One next action. Behaviour first, balances second.</p>" + draftNote() + who +
       '<section class="card"><p class="tag ok">Planning aid \u00b7 ' + esc(labelState(state)) + "</p><h2>" + esc(action.title) + "</h2><ol>" + steps + "</ol><p>" + esc(action.why) + "</p><p class=\"muted\">General education, not personal financial advice. Override the aid in Settings.</p></section>" +
       '<div class="actions"><a class="btn" href="onboarding.html">Set up</a><a class="btn btn-ghost" href="plan.html">Open the plan</a><a class="btn btn-ghost" href="support.html">Support</a></div>' +
-      '<div class="grid two"><a class="card" href="plan-buckets.html"><h2>Buckets</h2><p>Editable ranges, not a fixed split.</p></a><a class="card" href="family-meetings.html"><h2>Money meeting</h2><p>Monthly agenda and a calendar file.</p></a><a class="card" href="plan-legacy.html"><h2>Legacy</h2><p>Estate and non-estate flags.</p></a><a class="card" href="tools-bucket.html"><h2>Calculators</h2><p>Educational estimates only.</p></a></div>';
+      '<div class="grid two"><a class="card" href="plan-buckets.html"><h2>Buckets</h2><p>Editable ranges, not a fixed split.</p></a><a class="card" href="family-meetings.html"><h2>Money meeting</h2><p>Monthly agenda and a calendar file.</p></a><a class="card" href="plan-legacy.html"><h2>Legacy</h2><p>Estate and non-estate flags.</p></a><a class="card" href="tools.html"><h2>Calculators</h2><p>Educational estimates only.</p></a></div>';
   };
   render.onboarding = function () {
     return "<h1>Set up</h1><p class=\"lede\">Skip any question. Broad ranges are enough. Figures stay on this device.</p>" + draftNote() +
@@ -247,6 +261,21 @@
   };
   render["tool-subs"] = function () {
     return "<h1>Subscription audit</h1>" + draftNote() + '<form id="sub-form"><label class="field"><span>Name</span><input name="name" type="text"></label><label class="field"><span>Monthly amount</span><input name="amount" type="number" min="0"></label><button class="btn" type="submit">Add</button></form><div id="sub-list"></div>';
+  };
+  render.tools = function () {
+    var items = [
+      ["tools-bucket.html", "Buckets", "Ranges for one pay cycle. Not a fixed split."],
+      ["tools-debt.html", "Debt", "Snowball and avalanche, side by side."],
+      ["tools-emergency.html", "Emergency fund", "Essential costs times months you choose."],
+      ["tools-mortgage.html", "Mortgage", "Extra repayment and a rate stress. Not a loan offer."],
+      ["tools-retirement.html", "Retirement", "A range under named assumptions."],
+      ["tools-super.html", "Super", "User-entered rate and cap."],
+      ["tools-net-worth.html", "Net worth", "Hidden until set-up has an income figure."],
+      ["tools-subscriptions.html", "Subscriptions", "Keep, pause or remove."]
+    ];
+    return "<h1>Calculators</h1>" + draftNote() + items.map(function (item) {
+      return '<a class="card" href="' + item[0] + '"><h2>' + esc(item[1]) + "</h2><p>" + esc(item[2]) + "</p></a>";
+    }).join("");
   };
   render.learn = function () {
     return "<h1>Learn</h1>" + draftNote() + AcerContent.lessons.map(function (l) {

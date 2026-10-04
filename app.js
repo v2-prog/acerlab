@@ -2,30 +2,30 @@
   var KEY = "acerlab.household.v3";
   var NAV = [
     ["/", "Dashboard", ""],
-    ["/onboarding", "Set up", ""],
-    ["/plan", "My plan", "Plan"],
-    ["/plan/foundations", "Foundations", "Plan"],
-    ["/plan/buckets", "Buckets", "Plan"],
-    ["/plan/debt", "Debt", "Plan"],
-    ["/plan/emergency-fund", "Emergency fund", "Plan"],
-    ["/plan/home", "Home", "Plan"],
-    ["/plan/super", "Super", "Plan"],
-    ["/plan/investing", "Investing", "Plan"],
-    ["/plan/retirement", "Retirement", "Plan"],
-    ["/plan/legacy", "Legacy", "Plan"],
-    ["/family", "Family", "Family"],
-    ["/family/lessons", "Lessons", "Family"],
-    ["/family/chores", "Chores", "Family"],
-    ["/family/goals", "Goals", "Family"],
-    ["/family/meetings", "Money meeting", "Family"],
-    ["/tools", "Calculators", "Tools"],
-    ["/learn", "Learn", "Learn"],
-    ["/glossary", "Glossary", "Learn"],
-    ["/support", "Support", "Safety"],
-    ["/about", "About", "Safety"],
-    ["/disclaimer", "Disclaimer", "Safety"],
-    ["/privacy", "Privacy", "Safety"],
-    ["/settings", "Settings", ""]
+    ["/onboarding/", "Set up", ""],
+    ["/plan/", "My plan", "Plan"],
+    ["/plan/foundations/", "Foundations", "Plan"],
+    ["/plan/buckets/", "Buckets", "Plan"],
+    ["/plan/debt/", "Debt", "Plan"],
+    ["/plan/emergency-fund/", "Emergency fund", "Plan"],
+    ["/plan/home/", "Home", "Plan"],
+    ["/plan/super/", "Super", "Plan"],
+    ["/plan/investing/", "Investing", "Plan"],
+    ["/plan/retirement/", "Retirement", "Plan"],
+    ["/plan/legacy/", "Legacy", "Plan"],
+    ["/family/", "Family", "Family"],
+    ["/family/lessons/", "Lessons", "Family"],
+    ["/family/chores/", "Chores", "Family"],
+    ["/family/goals/", "Goals", "Family"],
+    ["/family/meetings/", "Money meeting", "Family"],
+    ["/tools/", "Calculators", "Tools"],
+    ["/learn/", "Learn", "Learn"],
+    ["/glossary/", "Glossary", "Learn"],
+    ["/support/", "Support", "Safety"],
+    ["/about/", "About", "Safety"],
+    ["/disclaimer/", "Disclaimer", "Safety"],
+    ["/privacy/", "Privacy", "Safety"],
+    ["/settings/", "Settings", ""]
   ];
 
   function read() {
@@ -114,8 +114,8 @@
     var who = d.who ? "<p class=\"muted\">Set up for " + esc(d.who) + (d.region ? " \u00b7 " + esc(d.region) : "") + ".</p>" : "<p class=\"muted\">No household set up yet. Three questions are enough to start.</p>";
     return "<h1>Dashboard</h1><p class=\"lede\">One next action. Behaviour first, balances second.</p>" + draftNote() + who +
       '<section class="card"><p class="tag ok">Planning aid \u00b7 ' + esc(labelState(state)) + "</p><h2>" + esc(action.title) + "</h2><ol>" + steps + "</ol><p>" + esc(action.why) + "</p><p class=\"muted\">General education, not personal financial advice. Override the aid in Settings.</p></section>" +
-      '<div class="actions"><a class="btn" href="/onboarding">Set up</a><a class="btn btn-ghost" href="/plan">Open the plan</a><a class="btn btn-ghost" href="/support">Support</a></div>' +
-      '<div class="grid two"><a class="card" href="/plan/buckets"><h2>Buckets</h2><p>Editable ranges, not a fixed split.</p></a><a class="card" href="/family/meetings"><h2>Money meeting</h2><p>Monthly agenda and a calendar file.</p></a><a class="card" href="/plan/legacy"><h2>Legacy</h2><p>Estate and non-estate flags.</p></a><a class="card" href="/tools"><h2>Calculators</h2><p>Educational estimates only.</p></a></div>';
+      '<div class="actions"><a class="btn" href="/onboarding/">Set up</a><a class="btn btn-ghost" href="/plan/">Open the plan</a><a class="btn btn-ghost" href="/support/">Support</a></div>' +
+      '<div class="grid two"><a class="card" href="/plan/buckets/"><h2>Buckets</h2><p>Editable ranges, not a fixed split.</p></a><a class="card" href="/family/meetings/"><h2>Money meeting</h2><p>Monthly agenda and a calendar file.</p></a><a class="card" href="/plan/legacy/"><h2>Legacy</h2><p>Estate and non-estate flags.</p></a><a class="card" href="/tools/"><h2>Calculators</h2><p>Educational estimates only.</p></a></div>';
   };
   render.onboarding = function () {
     return "<h1>Set up</h1><p class=\"lede\">Skip any question. Broad ranges are enough. Figures stay on this device.</p>" + draftNote() +
@@ -157,29 +157,29 @@
     return "<h1>Debt elimination</h1>" + draftNote() +
       "<p>Snowball pays the smallest balance first. Avalanche pays the highest interest first. You choose. The calculator shows both.</p>" +
       "<ul><li>Never miss a minimum in the plan.</li><li>Rent, utilities, food, medication and insurance come before extra repayments.</li><li>Arrears open the hardship path before an aggressive plan.</li><li>Unmanageable debt goes to free financial counselling.</li><li>Do not close cards until emergency access and payment arrangements are safe. Not at all if financial abuse is flagged.</li></ul>" +
-      '<div class="actions"><a class="btn" href="/tools/debt-calculator">Open calculator</a><a class="btn btn-ghost" href="/support">Hardship contacts</a></div>';
+      '<div class="actions"><a class="btn" href="/tools/debt-calculator/">Open calculator</a><a class="btn btn-ghost" href="/support/">Hardship contacts</a></div>';
   };
   render.emergency = function () {
     return "<h1>Emergency fund</h1>" + draftNote() +
       "<p>Target equals essential monthly costs times months you select: 1 for an early buffer, 3 as a baseline, 6 for stronger cover, or more if income varies, health is uncertain, you are self-employed, or people depend on you.</p>" +
-      '<div class="actions"><a class="btn" href="/tools/emergency-fund">Calculator</a></div>';
+      '<div class="actions"><a class="btn" href="/tools/emergency-fund/">Calculator</a></div>';
   };
   render.home = function () {
     return "<h1>Home and mortgage</h1>" + draftNote() +
       "<p>Ownership is optional, not a moral milestone. Compare deposit, duty you look up, repayments, rate sensitivity, maintenance, insurance, time horizon and what else the deposit could do.</p>" +
       "<p>Before any refinancing reading: fees, break costs, and the risk that income falls. This page does not recommend refinancing or borrowing.</p>" +
-      '<div class="actions"><a class="btn" href="/tools/mortgage">Extra-payment calculator</a></div>';
+      '<div class="actions"><a class="btn" href="/tools/mortgage/">Extra-payment calculator</a></div>';
   };
   render.super = function () {
     return "<h1>Superannuation</h1>" + draftNote() +
       "<p>Education, not personalised regulated advice. Find lost accounts via the ATO. Compare fees without a fund named here. Check investment options, employer contributions and beneficiary nominations.</p>" +
       '<p class="note"><span class="tag">Idea</span><span>A 15 per cent contribution target is an idea from public personal-finance discussion, not a default for everyone. Caps and rates come from the ATO, not this app.</span></p>' +
       '<p><a href="https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super">ATO super</a></p>' +
-      '<div class="actions"><a class="btn" href="/tools/super-estimator">Estimator</a></div>';
+      '<div class="actions"><a class="btn" href="/tools/super-estimator/">Estimator</a></div>';
   };
   render.investing = function (d) {
     if (investingBlocked(d)) {
-      return "<h1>Investing</h1>" + draftNote() + '<p class="bad"><span class="tag bad">Held</span><span>Investing content stays hidden while essentials exceed income, arrears are flagged, or the planning aid is crisis or stabilising.</span></p><a class="btn" href="/support">Support</a>';
+      return "<h1>Investing</h1>" + draftNote() + '<p class="bad"><span class="tag bad">Held</span><span>Investing content stays hidden while essentials exceed income, arrears are flagged, or the planning aid is crisis or stabilising.</span></p><a class="btn" href="/support/">Support</a>';
     }
     return "<h1>Investing</h1>" + draftNote() +
       "<p>Simple, diversified and low-cost is a learning frame. Fees and time horizon matter. Values fall. This is not a product suggestion.</p><p class=\"muted\">What this does not mean: a fund is suitable for you.</p>";
@@ -188,7 +188,7 @@
     return "<h1>Retirement</h1>" + draftNote() +
       "<p>Three lifestyles: basic, comfortable, preferred. The planner returns a range under assumptions you can see. It is never a single number. Tax, housing, aged care and government support are uncertain.</p>" +
       '<p><a href="https://www.servicesaustralia.gov.au/">Services Australia</a> \u00b7 <a href="https://www.ato.gov.au/">ATO</a></p>' +
-      '<div class="actions"><a class="btn" href="/tools/retirement">Open planner</a></div>';
+      '<div class="actions"><a class="btn" href="/tools/retirement/">Open planner</a></div>';
   };
   render.legacy = function (d) {
     var items = [
@@ -224,7 +224,7 @@
   };
   render.family = function () {
     return "<h1>Family</h1>" + draftNote() +
-      '<div class="grid two"><a class="card" href="/family/lessons"><h2>Lessons</h2><p>Age bands. Children see only their band.</p></a><a class="card" href="/family/chores"><h2>Chores</h2><p>Essential work is not a wage.</p></a><a class="card" href="/family/goals"><h2>Goals</h2><p>Voluntary.</p></a><a class="card" href="/family/meetings"><h2>Meeting</h2><p>Pause button included.</p></a></div>' +
+      '<div class="grid two"><a class="card" href="/family/lessons/"><h2>Lessons</h2><p>Age bands. Children see only their band.</p></a><a class="card" href="/family/chores/"><h2>Chores</h2><p>Essential work is not a wage.</p></a><a class="card" href="/family/goals/"><h2>Goals</h2><p>Voluntary.</p></a><a class="card" href="/family/meetings/"><h2>Meeting</h2><p>Pause button included.</p></a></div>' +
       "<h2>Activity ideas</h2><ul><li>Plan a meal under a fixed amount.</li><li>Compare two phone plans.</li><li>Save toward a shared outing.</li><li>Audit subscriptions.</li><li>Interview a grandparent about money lessons.</li><li>Build a household emergency checklist.</li></ul>";
   };
   render.lessons = function () {
@@ -267,14 +267,14 @@
   };
   render.tools = function () {
     var items = [
-      ["/tools/bucket-calculator", "Buckets", "Ranges for one pay cycle. Not a fixed split."],
-      ["/tools/debt-calculator", "Debt", "Snowball and avalanche, side by side."],
-      ["/tools/emergency-fund", "Emergency fund", "Essential costs times months you choose."],
-      ["/tools/mortgage", "Mortgage", "Extra repayment and a rate stress. Not a loan offer."],
-      ["/tools/retirement", "Retirement", "A range under named assumptions."],
-      ["/tools/super-estimator", "Super", "User-entered rate and cap."],
-      ["/tools/net-worth", "Net worth", "Hidden until set-up has an income figure."],
-      ["/tools/subscription-audit", "Subscriptions", "Keep, pause or remove."]
+      ["/tools/bucket-calculator/", "Buckets", "Ranges for one pay cycle. Not a fixed split."],
+      ["/tools/debt-calculator/", "Debt", "Snowball and avalanche, side by side."],
+      ["/tools/emergency-fund/", "Emergency fund", "Essential costs times months you choose."],
+      ["/tools/mortgage/", "Mortgage", "Extra repayment and a rate stress. Not a loan offer."],
+      ["/tools/retirement/", "Retirement", "A range under named assumptions."],
+      ["/tools/super-estimator/", "Super", "User-entered rate and cap."],
+      ["/tools/net-worth/", "Net worth", "Hidden until set-up has an income figure."],
+      ["/tools/subscription-audit/", "Subscriptions", "Keep, pause or remove."]
     ];
     return "<h1>Calculators</h1>" + draftNote() + items.map(function (item) {
       return '<a class="card" href="' + item[0] + '"><h2>' + esc(item[1]) + "</h2><p>" + esc(item[2]) + "</p></a>";

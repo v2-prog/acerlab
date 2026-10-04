@@ -2,8 +2,8 @@
   var KEY = "acerlab.household.v3";
   var NAV = [
     ["/", "Dashboard", ""],
-    ["/onboarding/", "Set up", ""],
-    ["/plan/", "My plan", "Plan"],
+    ["/onboarding", "Set up", ""],
+    ["/plan", "My plan", "Plan"],
     ["/plan/foundations/", "Foundations", "Plan"],
     ["/plan/buckets/", "Buckets", "Plan"],
     ["/plan/debt/", "Debt", "Plan"],
@@ -114,7 +114,7 @@
     var who = d.who ? "<p class=\"muted\">Set up for " + esc(d.who) + (d.region ? " \u00b7 " + esc(d.region) : "") + ".</p>" : "<p class=\"muted\">No household set up yet. Three questions are enough to start.</p>";
     return "<h1>Dashboard</h1><p class=\"lede\">One next action. Behaviour first, balances second.</p>" + draftNote() + who +
       '<section class="card"><p class="tag ok">Planning aid \u00b7 ' + esc(labelState(state)) + "</p><h2>" + esc(action.title) + "</h2><ol>" + steps + "</ol><p>" + esc(action.why) + "</p><p class=\"muted\">General education, not personal financial advice. Override the aid in Settings.</p></section>" +
-      '<div class="actions"><a class="btn" href="/onboarding/">Set up</a><a class="btn btn-ghost" href="/plan/">Open the plan</a><a class="btn btn-ghost" href="/support/">Support</a></div>' +
+      '<div class="actions"><a class="btn" href="/onboarding">Set up</a><a class="btn btn-ghost" href="/plan">Open the plan</a><a class="btn btn-ghost" href="/support/">Support</a></div>' +
       '<div class="grid two"><a class="card" href="/plan/buckets/"><h2>Buckets</h2><p>Editable ranges, not a fixed split.</p></a><a class="card" href="/family/meetings/"><h2>Money meeting</h2><p>Monthly agenda and a calendar file.</p></a><a class="card" href="/plan/legacy/"><h2>Legacy</h2><p>Estate and non-estate flags.</p></a><a class="card" href="/tools/"><h2>Calculators</h2><p>Educational estimates only.</p></a></div>';
   };
   render.onboarding = function () {

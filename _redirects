@@ -1,2 +1,5 @@
 # Pretty URLs are handled by Cloudflare Pages.
 # Do not rewrite /onboarding to /onboarding.html — that loops.
+# Do not add plan/legacy.html beside plan/legacy/index.html — that loops too.
+# Slashless nested path only. Trailing slash is the directory index.
+/plan/legacy /plan/legacy/ 301

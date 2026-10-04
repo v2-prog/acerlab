@@ -48,10 +48,13 @@
   }
 
   function currentFile() {
-    var path = location.pathname.replace(/\\.html$/, "").replace(/\\/index$/, "");
+    var path = location.pathname;
+    if (path.endsWith(".html")) path = path.slice(0, -5);
+    if (path.endsWith("/index")) path = path.slice(0, -6);
     if (path.length > 1 && path.endsWith("/")) path = path.slice(0, -1);
     return path || "/";
   }
+
   function classify(d) {
     if (d.abuse || d.crisis === "yes" || d.priority === "stress") return "crisis";
     if (d.arrears === "yes") return "stabilising";

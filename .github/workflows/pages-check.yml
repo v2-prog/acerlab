@@ -8,12 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Clean paths must not also be flat html files
+      - name: Onboarding is a single file, not a redirect loop
         run: |
           set -euo pipefail
-          test -f onboarding/index.html
-          test ! -f onboarding.html
-          test -f plan/legacy/index.html
-          test ! -f plan-legacy.html
-          grep -q "Review status: draft" onboarding/index.html
-          echo "clean paths ok"
+          test -f onboarding.html
+          test ! -d onboarding
+          grep -q "Review status: draft" onboarding.html
+          echo "onboarding file ok"

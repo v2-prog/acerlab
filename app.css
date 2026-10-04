@@ -35,7 +35,7 @@ a:hover { color: var(--clay); }
 .brand { padding: 1.2rem 1.1rem 0.9rem; border-bottom: 1px solid var(--line); text-decoration: none; color: inherit; display: block; }
 .brand strong { display: block; font-family: var(--display); font-size: 1.35rem; font-weight: 500; color: var(--primary); }
 .brand span { display: block; font-size: 0.75rem; color: var(--ink-soft); margin-top: 0.2rem; }
-.nav { padding: 0.45rem 0 2rem; }
+.nav .nav-label { margin: 0.85rem 1rem 0.15rem; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft); }
 .nav a, .nav button.navlink { display: flex; align-items: center; gap: 0.55rem; min-height: 2.5rem; padding: 0.25rem 1rem; text-decoration: none; color: var(--ink); border: 0; border-left: 3px solid transparent; background: transparent; width: 100%; text-align: left; font: inherit; cursor: pointer; }
 .nav a:hover, .nav button.navlink:hover { background: var(--paper); }
 .nav a.is-current { background: var(--ok-soft); color: var(--primary); border-left-color: var(--primary); }

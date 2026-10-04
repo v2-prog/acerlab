@@ -1,0 +1,19 @@
+name: AcerLab link check
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Clean paths must not also be flat html files
+        run: |
+          set -euo pipefail
+          test -f onboarding/index.html
+          test ! -f onboarding.html
+          test -f plan/legacy/index.html
+          test ! -f plan-legacy.html
+          grep -q "Review status: draft" onboarding/index.html
+          echo "clean paths ok"

@@ -8,10 +8,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Onboarding is a single file, not a redirect loop
+      - name: Rooms are single files, and /plan/legacy redirects
         run: |
           set -euo pipefail
           test -f onboarding.html
           test ! -d onboarding
-          grep -q "Review status: draft" onboarding.html
-          echo "onboarding file ok"
+          test -f plan.html
+          test ! -d plan
+          test -f plan-legacy.html
+          test ! -f plan/legacy.html
+          grep -q '/plan/legacy /plan-legacy 301' _redirects
+          grep -q '/plan/legacy/ /plan-legacy 301' _redirects
+          grep -q 'Review status: draft' plan-legacy.html
+          echo "legacy route ok"

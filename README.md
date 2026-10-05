@@ -5,13 +5,13 @@ Household money and legacy notebook for Australia. Static files so Cloudflare Pa
 General information only. Not personal financial, tax or legal advice.
 
 - Repo: https://github.com/v2-prog/acerlab
-- Pages project: acerlab-project
-- Live: https://acerlab-project.pages.dev
+- Pages project: acer-9wy (also acerlab-project)
+- Live: https://acer-9wy.pages.dev and https://cocoblack.org
 - Structure Lab (land and trusts) stays on https://acerlab.link
 
 ## Cloudflare
 
-Workers and Pages, project acerlab-project, Git source v2-prog/acerlab, branch main.
+Workers and Pages, Git source v2-prog/acerlab, branch main.
 Framework preset: None. Build command empty. Output directory /.
 
-Clean paths such as /plan/legacy are rewritten in _redirects.
+`/plan/legacy` and `/plan/legacy/` 301 to `/plan-legacy` (plan-legacy.html). Do not add plan/legacy.html or a plan/ directory.

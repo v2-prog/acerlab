@@ -8,16 +8,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Rooms are single files, and /plan/legacy redirects
+      - name: Trailing-slash rooms are directory indexes only
         run: |
           set -euo pipefail
-          test -f onboarding.html
-          test ! -d onboarding
-          test -f plan.html
-          test ! -d plan
-          test -f plan-legacy.html
+          test -f onboarding/index.html
+          test ! -f onboarding.html
+          test -f plan/index.html
+          test ! -f plan.html
+          test -f plan/legacy/index.html
           test ! -f plan/legacy.html
-          grep -q '/plan/legacy /plan-legacy 301' _redirects
-          grep -q '/plan/legacy/ /plan-legacy 301' _redirects
-          grep -q 'Review status: draft' plan-legacy.html
-          echo "legacy route ok"
+          test -f tools/index.html
+          test ! -f tools.html
+          test -f plan-legacy.html
+          grep -q '/onboarding/' app.js
+          grep -q '/plan/' app.js
+          grep -q '/plan/legacy/' app.js
+          grep -q '/tools/' app.js
+          echo "trailing-slash rooms ok"

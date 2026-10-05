@@ -2,7 +2,7 @@
   var KEY = "acerlab.household.v3";
   var NAV = [
     ["/", "Dashboard", ""],
-    ["/onboarding", "Set up", ""],
+    ["/onboarding/", "Set up", ""],
     ["/plan/", "My plan", "Plan"],
     ["/plan/foundations/", "Foundations", "Plan"],
     ["/plan/buckets/", "Buckets", "Plan"],

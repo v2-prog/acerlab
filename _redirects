@@ -1,6 +1,3 @@
-# Pretty URLs are handled by Cloudflare Pages.
-# Do not rewrite /onboarding to /onboarding.html — that loops.
-# Do not add plan/legacy.html beside a directory index — that loops too.
-# /plan/legacy is not a directory. The room is plan-legacy.html, served at /plan-legacy.
-/plan/legacy /plan-legacy 301
-/plan/legacy/ /plan-legacy 301
+# Pretty URLs are directory indexes only.
+# Do not add onboarding.html, plan.html, tools.html, or plan/legacy.html beside those indexes — Cloudflare 308-loops.
+# /plan/legacy/ is plan/legacy/index.html. /plan-legacy remains the flat alias.

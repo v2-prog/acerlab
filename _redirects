@@ -1,3 +1,6 @@
 # Pretty URLs are directory indexes only.
-# Do not add onboarding.html, plan.html, tools.html, or plan/legacy.html beside those indexes — Cloudflare 308-loops.
-# /plan/legacy/ is plan/legacy/index.html. /plan-legacy remains the flat alias.
+# Do not add onboarding.html, plan.html, tools.html, or plan/legacy.html — Cloudflare 308-loops.
+# /plan/legacy is not a directory. Pages was 404ing plan/legacy/index.html on both hosts.
+# /plan-legacy remains the only legacy room.
+/plan/legacy /plan-legacy 301
+/plan/legacy/ /plan-legacy 301

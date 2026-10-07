@@ -1,4 +1,7 @@
 # Pretty URLs are directory indexes only.
 # Do not add onboarding.html, plan.html, tools.html, or plan/legacy.html — Cloudflare 308-loops.
 # /plan/legacy/ is plan/legacy/index.html. Nav already points at the trailing-slash path.
-# No redirect here: a 301 was not applied on acer-9wy and left both slash forms on the 404 page.
+# Pages is not serving that nested index (both slash forms 404). Rewrite to the
+# already-deployed room file. Status 200 keeps the browser URL and does not redirect.
+/plan/legacy   /plan-legacy  200
+/plan/legacy/  /plan-legacy  200

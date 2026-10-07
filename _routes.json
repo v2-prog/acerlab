@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "include": ["/plan/legacy", "/plan/legacy/"],
+  "exclude": []
+}

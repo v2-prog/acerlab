@@ -1,4 +1,5 @@
 # Pretty URLs are directory indexes only.
 # Do not add onboarding.html, plan.html, tools.html, or plan/legacy.html — Cloudflare 308-loops.
 # /plan/legacy is served by functions/plan/legacy.js (and functions/plan/legacy/index.js).
-# A status-200 rewrite to /plan-legacy did not apply on acer-9wy.pages.dev and both slash forms 404ed.
+# Status-200 rewrites are unsupported on Pages. Fetching /plan-legacy.html from ASSETS 404s;
+# the function uses the pretty path /plan-legacy and falls back to the room HTML.

@@ -12,7 +12,7 @@
     ["/plan/super/", "Super", "Plan"],
     ["/plan/investing/", "Investing", "Plan"],
     ["/plan/retirement/", "Retirement", "Plan"],
-    ["/plan/legacy/", "Legacy", "Plan"],
+    ["/plan-legacy", "Legacy", "Plan"],
     ["/family/", "Family", "Family"],
     ["/family/lessons/", "Lessons", "Family"],
     ["/family/chores/", "Chores", "Family"],
@@ -115,7 +115,7 @@
     return "<h1>Dashboard</h1><p class=\"lede\">One next action. Behaviour first, balances second.</p>" + draftNote() + who +
       '<section class="card"><p class="tag ok">Planning aid \u00b7 ' + esc(labelState(state)) + "</p><h2>" + esc(action.title) + "</h2><ol>" + steps + "</ol><p>" + esc(action.why) + "</p><p class=\"muted\">General education, not personal financial advice. Override the aid in Settings.</p></section>" +
       '<div class="actions"><a class="btn" href="/onboarding/">Set up</a><a class="btn btn-ghost" href="/plan/">Open the plan</a><a class="btn btn-ghost" href="/support/">Support</a></div>' +
-      '<div class="grid two"><a class="card" href="/plan/buckets/"><h2>Buckets</h2><p>Editable ranges, not a fixed split.</p></a><a class="card" href="/family/meetings/"><h2>Money meeting</h2><p>Monthly agenda and a calendar file.</p></a><a class="card" href="/plan/legacy/"><h2>Legacy</h2><p>Estate and non-estate flags.</p></a><a class="card" href="/tools/"><h2>Calculators</h2><p>Educational estimates only.</p></a></div>';
+      '<div class="grid two"><a class="card" href="/plan/buckets/"><h2>Buckets</h2><p>Editable ranges, not a fixed split.</p></a><a class="card" href="/family/meetings/"><h2>Money meeting</h2><p>Monthly agenda and a calendar file.</p></a><a class="card" href="/plan-legacy"><h2>Legacy</h2><p>Estate and non-estate flags.</p></a><a class="card" href="/tools/"><h2>Calculators</h2><p>Educational estimates only.</p></a></div>';
   };
   render.onboarding = function () {
     return "<h1>Set up</h1><p class=\"lede\">Skip any question. Broad ranges are enough. Figures stay on this device.</p>" + draftNote() +

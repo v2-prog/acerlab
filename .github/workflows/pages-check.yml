@@ -15,13 +15,15 @@ jobs:
           test ! -f onboarding.html
           test -f plan/index.html
           test ! -f plan.html
-          test -f plan/legacy/index.html
+          test ! -f plan/legacy/index.html
           test ! -f plan/legacy.html
+          test -f plan-legacy.html
           test -f tools/index.html
           test ! -f tools.html
-          test -f plan-legacy.html
+          test -f functions/plan/legacy.js
           grep -q '/onboarding/' app.js
           grep -q '/plan/' app.js
-          grep -q '/plan/legacy/' app.js
+          grep -q '/plan-legacy' app.js
           grep -q '/tools/' app.js
+          grep -q '/plan/legacy' _redirects
           echo "trailing-slash rooms ok"

@@ -1,6 +1,7 @@
 # Pretty URLs are directory indexes only.
 # Do not add onboarding.html, plan.html, tools.html, or plan/legacy.html — Cloudflare 308-loops.
-# /plan/legacy and /plan/legacy/ are not served by the nested index on this project.
-# 308 both forms to the existing room. Not a self-redirect.
-/plan/legacy   /plan-legacy   308
-/plan/legacy/  /plan-legacy   308
+# Nested plan/legacy/index.html is not served on this project (both hosts 404, cache-control no-store).
+# 308 both slash forms to the existing room. Not a self-redirect.
+/plan/legacy             /plan-legacy    308
+/plan/legacy/            /plan-legacy    308
+/plan/legacy/index.html  /plan-legacy    308

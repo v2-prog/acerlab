@@ -20,8 +20,8 @@ jobs:
           test -f plan-legacy.html
           test -f tools/index.html
           test ! -f tools.html
-          test -f functions/plan/legacy.js
-          test -f functions/plan/legacy/index.js
+          grep -q '/plan/legacy /plan-legacy 200' _redirects
+          grep -q '/plan/legacy/ /plan-legacy 200' _redirects
           grep -q '/onboarding/' app.js
           grep -q '/plan/' app.js
           grep -q '/plan/legacy/' app.js

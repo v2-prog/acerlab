@@ -1,8 +1,8 @@
 # Pretty URLs are directory indexes only for top-level rooms.
 # Do not add onboarding.html, plan.html, tools.html, or plan/legacy.html — Cloudflare 308-loops.
 # /plan/legacy/ is rewritten to the flat plan-legacy room (no nested index served).
-# Pages Function in functions/plan/legacy.js handles the rewrite; _redirects is fallback.
-# Trigger redeploy 2026-10-14.
+# Pages Function in functions/plan/legacy.js is primary; _redirects is static fallback.
+# Trigger redeploy 2026-10-13T21:47Z — live hosts still 404 on /plan/legacy until Pages picks this up.
 /plan/legacy /plan-legacy 200
 /plan/legacy/ /plan-legacy 200
 /plan/legacy/* /plan-legacy 200

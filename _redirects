@@ -1,7 +1,7 @@
 # Pretty URLs are directory indexes only for top-level rooms.
 # Do not add onboarding.html, plan.html, tools.html, or plan/legacy.html — Cloudflare 308-loops.
 # /plan/legacy/ is rewritten to the flat plan-legacy room (no nested index served).
-# Updated 2026-10-14 for reliable rewrite.
+# Trigger redeploy 2026-10-14.
 /plan/legacy /plan-legacy 200
 /plan/legacy/ /plan-legacy 200
 /plan/legacy/* /plan-legacy 200

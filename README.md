@@ -14,4 +14,4 @@ General information only. Not personal financial, tax or legal advice.
 Workers and Pages, Git source v2-prog/acerlab, branch main.
 Framework preset: None. Build command empty. Output directory /.
 
-`/plan/legacy` and `/plan/legacy/` 301 to `/plan-legacy` (plan-legacy.html). Do not add plan/legacy.html or a plan/ directory.
+`/plan/legacy` and `/plan/legacy/` are rewritten (200) to `/plan-legacy` (plan-legacy.html) via Pages Function (primary) and `_redirects` (fallback). Do not add plan/legacy.html or a plan/legacy/ directory index — nested indexes under plan/ are not served by Cloudflare Pages and cause 404s. No flat .html twins for onboarding, plan, or tools.

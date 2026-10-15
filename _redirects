@@ -2,7 +2,7 @@
 # Do not add onboarding.html, plan.html, tools.html, or plan/legacy.html — Cloudflare 308-loops.
 # /plan/legacy and /plan/legacy/ rewrite (200) to the flat plan-legacy room.
 # Nested indexes under plan/ are not served; Pages Function is primary, _redirects is static fallback.
-# Trigger redeploy 2026-10-15 — live hosts must pick up this rewrite so /plan/legacy returns 200.
+# Trigger redeploy 2026-10-16 — live hosts must pick up this rewrite so /plan/legacy returns 200.
 /plan/legacy /plan-legacy 200
 /plan/legacy/ /plan-legacy 200
 /plan/legacy/* /plan-legacy 200

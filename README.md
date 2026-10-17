@@ -16,4 +16,4 @@ Framework preset: None. Build command empty. Output directory /.
 
 `/plan/legacy` and `/plan/legacy/` are rewritten (200) to `/plan-legacy` (plan-legacy.html) via Pages Function (primary) and `_redirects` (fallback). Do not add plan/legacy.html or a plan/legacy/ directory index — nested indexes under plan/ are not served by Cloudflare Pages and cause 404s. No flat .html twins for onboarding, plan, or tools.
 
-Last force redeploy: 2026-10-17.
+Last force redeploy: 2026-10-18.

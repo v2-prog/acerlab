@@ -1,19 +1,21 @@
 # AcerLab
 
-Household money and legacy notebook for Australia. Static files so Cloudflare Pages can publish with no build.
+Household money and legacy navigator — Australia only.
 
-General information only. Not personal financial, tax or legal advice.
+- **Live:** https://cocoblack.org/ and https://acer-9wy.pages.dev/
+- **Source:** this repo, branch `main`
+- **Cloudflare Pages project:** acer-9wy
 
-- Repo: https://github.com/v2-prog/acerlab
-- Pages project: acer-9wy (also acerlab-project)
-- Live: https://acer-9wy.pages.dev and https://cocoblack.org
-- Structure Lab (land and trusts) stays on https://acerlab.link
+## Rooms
 
-## Cloudflare
+Top-level rooms use directory indexes only (`/onboarding/`, `/plan/`, `/tools/`). Do **not** add matching flat `.html` twins or Cloudflare will 308-loop.
 
-Workers and Pages, Git source v2-prog/acerlab, branch main.
-Framework preset: None. Build command empty. Output directory /.
+`/plan/legacy` and `/plan/legacy/` are served by a Pages Function (`functions/plan/legacy.js` and `functions/plan/legacy/index.js`) that `ASSETS.fetch`es the flat `/plan-legacy` room. `_redirects` provides a 200 rewrite fallback. Nested static indexes under `plan/` are not served by Pages.
 
-`/plan/legacy` and `/plan/legacy/` are rewritten (200) to `/plan-legacy` (plan-legacy.html) via Pages Function (primary) and `_redirects` (fallback). Do not add plan/legacy.html or a plan/legacy/ directory index — nested indexes under plan/ are not served by Cloudflare Pages and cause 404s. No flat .html twins for onboarding, plan, or tools.
+## Draft notice
 
-Last force redeploy: 2026-10-18.
+The line “General information only. Not personal financial, tax or legal advice. Review status: draft. Last reviewed 2026-10-04.” must appear **only** in the footer of each room.
+
+## Deploy note
+
+If `/plan/legacy` still 404s after a push, open the Cloudflare Pages dashboard for **acer-9wy** and run **Retry deployment** / **Redeploy**. Git auto-deploy has been unreliable for this project.

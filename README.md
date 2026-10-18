@@ -19,3 +19,5 @@ The line “General information only. Not personal financial, tax or legal advic
 ## Deploy note
 
 If `/plan/legacy` still 404s after a push, open the Cloudflare Pages dashboard for **acer-9wy** and run **Retry deployment** / **Redeploy**. Git auto-deploy has been unreliable for this project.
+
+Force-redeploy trigger 2026-10-19T08:12Z — live hosts (cocoblack.org and acer-9wy.pages.dev) still return 404 for /plan/legacy until manual redeploy.

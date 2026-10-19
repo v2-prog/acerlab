@@ -2,7 +2,7 @@
 # Do not add onboarding.html, plan.html, tools.html, or plan/legacy.html — Cloudflare 308-loops.
 # /plan/legacy and /plan/legacy/ rewrite (200) to the flat plan-legacy room.
 # Nested indexes under plan/ are not served; Pages Function is primary, _redirects is static fallback.
-# Force redeploy 2026-10-17T21:15Z — live cocoblack.org and acer-9wy.pages.dev must serve /plan/legacy as 200.
+# Force redeploy 2026-10-20T08:15Z — live cocoblack.org and acer-9wy.pages.dev must serve /plan/legacy as 200.
 /plan/legacy /plan-legacy 200
 /plan/legacy/ /plan-legacy 200
 /plan/legacy/* /plan-legacy 200

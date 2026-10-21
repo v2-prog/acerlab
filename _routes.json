@@ -1,5 +1,4 @@
 {
   "version": 1,
-  "include": ["/plan/legacy", "/plan/legacy/", "/plan/legacy/*"],
-  "exclude": ["/*"]
+  "include": ["/plan/legacy", "/plan/legacy/", "/plan/legacy/*"]
 }
